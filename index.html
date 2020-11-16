@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+      html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td{border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; margin:0; padding:0}
+      body{line-height:1}
+      ol, ul{list-style:none}
+      blockquote, q{quotes:none}
+      blockquote:before, blockquote:after, q:before, q:after{content:none}
+      :focus{outline:0}
+      ins{text-decoration:none}
+      del{text-decoration:line-through}
+      table{border-collapse:collapse; border-spacing:0}
+
+      .clearfix:after{  content:"";   display:block;   height:0;   line-height:0;   clear:both;   visibility:hidden}
+
+      body {
+          font-family: Verdana, Geneva, sans-serif;
+          font-size: 62.5%;
+          min-height: 400px;
+      }
+
+      h1, h2 {
+          font-family: Arial, Helvetica, sans-serif;
+      }
+
+      a {
+          font-size: 1em;
+          color: #000;
+          border-bottom: 1px dotted #666;
+          text-decoration: none;
+      }
+
+      small {
+          font-size: .8em;
+      }
+
+
+      div.main {
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          height: 100%;
+      }
+
+      div.post {
+          width: 45em;
+          height: 65em;
+          font-size: 1.3em;
+          text-align: center;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-left: -22.5em;
+          margin-top: -200px;
+      }
+
+      div.post h1 {
+          font-size: 10em;
+          font-weight: normal;
+          text-align: center;
+          margin-top: 50px;
+      }
+
+      div.post h2 {
+          font-size: 5em;
+          font-weight: normal;
+      }
+
+      div.post p {
+          margin: 10em 0;
+          line-height: 1.3em;
+      }
+
+      div.post p.meta a {
+          margin: 0 5px;
+      }
+
+      body.page div.post p {
+          margin: 1em 0;
+      }
+
+      div.nav {
+          display: block;
+          width: 100%;
+          height: 20px;
+          background: #ddd;
+          padding: 5px 0;
+          text-align: center;
+      }
+
+      div.nav ul {
+          width: 100%;
+          text-align: center;
+      }
+
+      div.nav li {
+          display: inline;
+          font-size: 1.3em;
+          padding: 0 .5em;
+      }
+
+
+      div.nav form {
+          position: absolute;
+          top: 3px;
+          right: 5px;
+      }
+
+
+      div.twitter, div#comments {
+          text-align: left;
+          font-size: .8em;
+      }
+
+      div.twitter {
+          width: 100%;
+          margin: 3em auto 0;
+      }
+
+      div.tweet {
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          margin: 0 0 2em;
+      }
+
+      div.avatar {
+          display: block;
+          position: relative;
+          float: left;
+          margin-right: 6px;
+      }
+
+      div.avatar a {
+          border: 0;
+      }
+
+      div.avatar img {
+          width: 24px;
+          height: 24px;
+          margin-top: 3px;
+      }
+
+      div.message {
+          display: block;
+          position: relative;
+          float: left;
+          width: 470px;
+          line-height: 1.5em;
+      }
+
+      div#comments {
+          width: 100%;
+          margin: 3em auto 0;
+      }
+
+      div#comments p {
+          margin: 1em 0;
+      }
+
+      div#comments h3 {
+          font-size: 1.5em;
+      }
+
+      .commentlist {
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+      }
+
+      .comment {
+          margin: 1em 0 2em;
+          border-bottom: 1px solid #ccc;
+      }
+
+      div#comments cite {
+          font-size: 1.3em;
+      }
+
+
+      div.comment-body div {
+          margin-bottom: 1em;
+      }
+
+
+      div#comments label {
+          display: block;
+          position: relative;
+      }
+      div#comments form p {
+          width: 100%;
+          display: block;
+          position: relative;
+          float: left;
+          margin-bottom: 1em;
+      }
+      div#comments form p label,
+      div#comments form p span,
+      div#comments form p input {
+          display: block;
+          position: relative;
+          float: left;
+      }
+      div#comments form p input,
+      div#comments form p textarea {
+          width: 100%;
+      }
+
+      div#comments form p.form-submit input {
+          width: auto;
+      }
+
+      div#comments div.navigation {
+          display: block;
+          width: 100%;
+          position: relative;
+          float: left;  
+          margin: 2em 0;
+      }
+
+      div#comments div.navigation a {
+          font-size: 1.3em;
+      }
+
+      div.nav-previous {
+          float: left;
+      }
+
+      div.nav-next {
+          float: right;
+      }
+
+      div#respond {
+          margin: 3em 0;
+          display: block;
+          position: relative;
+          float: left;
+      }
+    </style>
+    <meta property="og:url"                content="dutertewillresign.github.io" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="Ilang beses na sinabi ng tuta ng China na mag-reresign siya?" />
+    <meta property="og:description"        content="I-add niyo nalang sa mga kasinungalingan niya" />
+    <meta property="og:image"              content="https://media.gettyimages.com/photos/graphic-content-philippine-president-rodrigo-duterte-gestures-the-picture-id817540664" />
+    <title>"I will Resign"</title>
+  </head>
+  <body>
+    <div class="nav"><a>bakit ang hirap maging pilipino?</a></div>
+    <div class="post">
+      <h1>14</h1>
+      <br>
+      <p>Ganito na karaming beses umiyak ang tuta ng china</p>
+      <cite>Source: <a href="https://newsinfo.inquirer.net/1144312/if-and-only-if-recounting-the-many-times-duterte-cried-i-will-resign">INQUIRER.net</a> </cite>
+    </div>
+  </body>
+</html>
